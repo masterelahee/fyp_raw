@@ -70,7 +70,7 @@
                                 </button> -->
 
                                 <button type="submit" class="btn btn-primary px-4" id="button1" disabled="disabled">
-                                    
+                                {{ trans('global.login') }}
                                 </button>
 
                             </div>
