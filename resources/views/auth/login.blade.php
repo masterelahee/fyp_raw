@@ -66,7 +66,7 @@
                                 </button> -->
 
                                 <input type="button" value="Submit" class="btn btn-primary px-4" id="button1" disabled="disabled">
-                                    {{ trans('global.login') }}
+                                    
                                 </input>
 
                             </div>
