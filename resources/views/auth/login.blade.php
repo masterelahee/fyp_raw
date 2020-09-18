@@ -50,6 +50,12 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <div class="cold-md-6 offset-md-4">
+                                <div class="g-recaptcha" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-6">
                                 <button type="submit" class="btn btn-primary px-4">
