@@ -5,6 +5,10 @@
  function enableBtn(){
    document.getElementById("button1").disabled = false;
  }
+
+ function recaptchaExpired(){
+    document.getElementById("button1").disabled = true;
+ }
  </script>
 <div class="row justify-content-center">
     <div class="col-md-8">
@@ -59,7 +63,7 @@
                         <div class="row">
                             <div class="col-6">
 
-                                <div class="g-recaptcha" data-callback="enableBtn" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
+                                <div class="g-recaptcha" data-expired-callback="recaptchaExpired" data-callback="enableBtn" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
                                                 
                                 <!-- <button type="submit" class="btn btn-primary px-4">
                                     {{ trans('global.login') }}
