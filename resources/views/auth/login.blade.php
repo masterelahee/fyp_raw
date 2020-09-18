@@ -1,5 +1,11 @@
 @extends('layouts.app')
 @section('content')
+
+<script>
+ function enableBtn(){
+   document.getElementById("button1").disabled = false;
+ }
+ </script>
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card-group">
@@ -50,22 +56,21 @@
                             </div>
                         </div>
 
-                       
-
-
-                                
-                            
-
                         <div class="row">
                             <div class="col-6">
 
-				<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
-                                 
-				<button type="submit" class="btn btn-primary px-4">
+                                <div class="g-recaptcha" data-callback="enableBtn" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
+                                                
+                                <!-- <button type="submit" class="btn btn-primary px-4">
                                     {{ trans('global.login') }}
-                                </button>
+                                </button> -->
+
+                                <input type="button" value="Submit" class="btn btn-primary px-4" id="button1" disabled="disabled">
+                                    {{ trans('global.login') }}
+                                </input>
 
                             </div>
+                            
                             <div class="col-6 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
                                     {{ trans('global.forgot_password') }}
