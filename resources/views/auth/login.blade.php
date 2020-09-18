@@ -50,17 +50,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="cold-md-6 offset-md-4">
-                                <div class="g-recaptcha" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
-                            </div>
-                        </div>
+                       
+
+
+                                
+                            
 
                         <div class="row">
                             <div class="col-6">
-                                <button type="submit" class="btn btn-primary px-4">
+
+				<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf4yc0ZAAAAAPC539LaC1MU4udTUDtuxyGHSWGf"></div>
+                                 
+				<button type="submit" class="btn btn-primary px-4">
                                     {{ trans('global.login') }}
                                 </button>
+
                             </div>
                             <div class="col-6 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
