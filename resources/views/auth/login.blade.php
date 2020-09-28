@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<?php header("X-Frame-Options: sameorigin");?>
+<?php 
+    header("X-Frame-Options: sameorigin");
+    header("X-XSS-Protection: 1; mode=block");
+    header("X-Content-Type-Options: nosniff");
+?>
 <script>
  function enableBtn(){
    document.getElementById("button1").disabled = false;
