@@ -28,7 +28,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                         <h1>{{ trans('panel.site_title') }}</h1>
-                        <p class="text-muted">{{ trans('global.login') }}</p>
+                        <p class="text-muted">{{ trans('global.login') }} (max 3 attempts)</p>
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
