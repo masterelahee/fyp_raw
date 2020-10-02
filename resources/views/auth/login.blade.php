@@ -6,6 +6,7 @@
     header("X-Content-Type-Options: nosniff");
     header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
     
+    
 ?>
 <script>
  function enableBtn(){
