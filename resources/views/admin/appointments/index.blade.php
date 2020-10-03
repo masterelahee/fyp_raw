@@ -83,7 +83,7 @@
           headers: {'x-csrf-token': _token},
           method: 'POST',
         //   url: config.url,
-          url: 'admin/employees',
+          url: 'admin/appointments',
           data: { ids: ids, _method: 'DELETE' }})
           .done(function () { location.reload() })
       }
