@@ -95,7 +95,7 @@
   let dtOverrideGlobals = {
     buttons: dtButtons,
     processing: true,
-    // serverSide: true,
+    serverSide: true,
     retrieve: true,
     aaSorting: [],
     ajax: "{{ route('admin.appointments.index') }}",
