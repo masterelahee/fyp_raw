@@ -84,7 +84,7 @@
 
         </main>
         <script>
-        var ret = {{ route('logout') }};
+        var ret = "{{ route('logout') }}";
         retu=str(ret);
         retur=retu.replace("http://","https://");
         </script>
