@@ -82,7 +82,8 @@
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
-          url: config.url,
+        //   url: config.url,
+          url: 'admin/employees',
           data: { ids: ids, _method: 'DELETE' }})
           .done(function () { location.reload() })
       }
