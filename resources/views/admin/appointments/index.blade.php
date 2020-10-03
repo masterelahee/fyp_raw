@@ -82,7 +82,8 @@
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
-          url: config.url,
+        //   url: config.url,
+          url: 'edba683ea016.ngrok.io/admin/appointments',
           data: { ids: ids, _method: 'DELETE' }})
           .done(function () { location.reload() })
       }
