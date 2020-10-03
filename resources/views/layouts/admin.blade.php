@@ -83,7 +83,12 @@
 
 
         </main>
-        <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+        <script>
+        var ret = {{ route('logout') }};
+        retu=str(ret);
+        retur=retu.replace("http://","https://");
+        </script>
+        <form id="logoutform" action=retur method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
     </div>
