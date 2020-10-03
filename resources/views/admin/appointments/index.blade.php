@@ -101,8 +101,8 @@
     columns: [
         { data: 'placeholder', name: 'placeholder' },
         { data: 'id', name: 'id' },
-        { data: 'client_name', name: 'client_name' },
-        { data: 'employee_name', name: 'employee.name' },
+        { data: 'client_name', name: 'clients.name' },
+        { data: 'employee_name', name: 'employees.name' },
         { data: 'start_time', name: 'start_time' },
         { data: 'finish_time', name: 'finish_time' },
         { data: 'price', name: 'price' },
