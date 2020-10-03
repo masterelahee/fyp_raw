@@ -84,8 +84,7 @@
           method: 'POST',
           url: config.url,
           data: { ids: ids, _method: 'DELETE' }})
-          .done(function () { location.reload() },
-          "dataSrc": "")
+          .done(function () { location.reload() })
       }
     }
   }
