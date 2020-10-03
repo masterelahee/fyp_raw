@@ -84,7 +84,8 @@
           method: 'POST',
           url: config.url,
           data: { ids: ids, _method: 'DELETE' }})
-          .done(function () { location.reload() })
+          .done(function () { location.reload() },
+          "dataSrc": "")
       }
     }
   }
@@ -94,7 +95,7 @@
   let dtOverrideGlobals = {
     buttons: dtButtons,
     processing: true,
-    serverSide: true,
+    // serverSide: true,
     retrieve: true,
     aaSorting: [],
     ajax: "{{ route('admin.appointments.index') }}",
