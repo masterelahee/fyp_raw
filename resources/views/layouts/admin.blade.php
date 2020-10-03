@@ -84,7 +84,8 @@
 
         </main>
        
-        <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+        <!-- <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;"> -->
+        <form id="logoutform" action="https://ae70e3618413.ngrok.io/logout" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
     </div>
