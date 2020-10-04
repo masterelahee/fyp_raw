@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+  header("Set-Cookie: id=a3fWa; Expires=Wed, 21 Dec 2020 07:28:00 GMT; Secure; HttpOnly")
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">

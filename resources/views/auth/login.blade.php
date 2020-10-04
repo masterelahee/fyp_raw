@@ -6,7 +6,7 @@
     header("X-Content-Type-Options: nosniff");
     header("Strict-Transport-Security: max-age=3;");
     header("Content-Security-Policy: upgrade-insecure-requests");
-    header("Set-Cookie: id=a3fWa; Domain=ccb9da537079.ngrok.io; Expires=Wed, 21 Dec 2020 07:28:00 GMT; Secure; HttpOnly")
+    header("Set-Cookie: id=a3fWa; Expires=Wed, 21 Dec 2020 07:28:00 GMT; Secure; HttpOnly")
         
 ?>
 <script>
