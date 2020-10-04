@@ -36,5 +36,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('appointments', 'AppointmentsController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
-    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    
 });
