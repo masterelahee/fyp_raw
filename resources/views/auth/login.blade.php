@@ -4,7 +4,7 @@
     header("X-Frame-Options: sameorigin");
     header("X-XSS-Protection: 1; mode=block");
     header("X-Content-Type-Options: nosniff");
-    header("Strict-Transport-Security: max-age=3; includeSubdomains");
+    header("Strict-Transport-Security: max-age=500; includeSubdomains");
     header("Content-Security-Policy: upgrade-insecure-requests");
     header("Set-Cookie: id=a3fWa; Expires=Wed, 21 Dec 2020 07:28:00 GMT; Secure; HttpOnly")
         
