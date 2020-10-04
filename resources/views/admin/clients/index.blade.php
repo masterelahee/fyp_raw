@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 @section('content')
 @can('client_create')
+<?php
+header("Content-Security-Policy: upgrade-insecure-requests");
+?>
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.clients.create") }}">
