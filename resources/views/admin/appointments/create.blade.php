@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 @section('content')
 <?php
-if(isset($_POST['submitButton'])) {
-    $comments=$_GET['comments'];
+function test() {
+    $comments="<script>alert('asda')</script>";
     $comments = filter_var($comments, FILTER_SANITIZE_STRING);
     $comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
-    return $comments ;
+    return '<textarea id="comments" name="comments" class="form-control ">$comments</textarea>';
 }
 ?>
 <div class="card">
@@ -80,7 +80,8 @@ if(isset($_POST['submitButton'])) {
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                <textarea id="comments" name="comments" class="form-control ">{{ old('comments', isset($appointment) ? $appointment->comments : '') }}</textarea>
+                <!-- <textarea id="comments" name="comments" class="form-control "></textarea> -->
+                <?php echo test(); ?>
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
                         {{ $errors->first('comments') }}
