@@ -2,7 +2,7 @@
 @section('content')
 <?php
 if(isset($_POST['submitButton'])) {
-    
+    $comments=$_GET['comments'];
     $comments = filter_var($comments, FILTER_SANITIZE_STRING);
     $comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
     return $comments ;
