@@ -3,7 +3,7 @@
 <?php
 
     $comments="<script>alert('asda')</script>";
-    $comments = filter_var($comments, FILTER_SANITIZE_STRING);
+    // $comments = filter_var($comments, FILTER_SANITIZE_STRING);
     
 
 ?>
