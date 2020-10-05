@@ -115,6 +115,7 @@
             </div>
             <div>
                 <input class="btn btn-danger" name="submitButton" type="submit" value="{{ trans('global.save') }}">
+				<p>this is to test that the website is refreshing rpoperly</p>
             </div>
         </form>
 
