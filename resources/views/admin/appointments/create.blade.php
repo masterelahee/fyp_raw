@@ -5,7 +5,7 @@ function test() {
     $comments="<script>alert('asda')</script>";
     $comments = filter_var($comments, FILTER_SANITIZE_STRING);
     $comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
-    return '<textarea id="comments" name="comments" class="form-control ">$comments</textarea>';
+    return '<textarea id="comments" name="comments" class="form-control ">'+$comments+'</textarea>';
 }
 ?>
 <div class="card">
