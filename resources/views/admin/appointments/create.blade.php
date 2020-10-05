@@ -1,11 +1,16 @@
 @extends('layouts.admin')
 @section('content')
 <?php
-
-    $comments="<script>alert('asda')</script>";
-    $comments = filter_var($comments, FILTER_SANITIZE_STRING);
-    $comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
-
+	if( isset($_GET['submit']) )
+	{
+		//be sure to validate and clean your variables
+		//$val1 = htmlentities($_GET['val1']);
+		//$val2 = htmlentities($_GET['val2']);
+		
+		$comments = $_GET['comments'];
+		$comments = filter_var($comments, FILTER_SANITIZE_STRING);
+		$comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
+	}
 ?>
 <div class="card">
     <div class="card-header">
@@ -79,7 +84,7 @@
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                 <textarea id="comments" name="comments" class="form-control "><?php echo $comments ?></textarea> 
+                 <textarea id="comments" name="comments" class="form-control "></textarea> 
                 
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
