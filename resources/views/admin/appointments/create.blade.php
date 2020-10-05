@@ -84,7 +84,7 @@
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                 <textarea id="comments" name="comments" class="form-control "></textarea> 
+                 <textarea id="comments" name="comments" class="form-control "><?php echo $comments ?></textarea> 
                 
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
@@ -115,7 +115,7 @@
             </div>
             <div>
                 <input class="btn btn-danger" name="submitButton" type="submit" value="{{ trans('global.save') }}">
-				<p>this is to test that the website is refreshing rpoperly</p>
+				
             </div>
         </form>
 
