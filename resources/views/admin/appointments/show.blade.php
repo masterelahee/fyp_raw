@@ -72,7 +72,7 @@
                         </th>
                         <td>
                             @foreach($appointment->services as $id => $services)
-                                <span class="label label-info label-many">{{{ $services->name }}}</span>
+                                <span class="label label-info label-many">{{ html_entity_decode($services->name) }}</span>
                             @endforeach
                         </td>
                     </tr>
