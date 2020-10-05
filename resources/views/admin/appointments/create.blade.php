@@ -73,7 +73,7 @@
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                 <textarea id="comments" name="comments" class="form-control ">{!! old('comments', isset($appointment) ? $appointment->comments : '') !!}</textarea> 
+                 <textarea id="comments" name="comments" class="form-control ">{{ old('comments', isset($appointment) ? $appointment->comments : '') }}</textarea> 
                 
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
