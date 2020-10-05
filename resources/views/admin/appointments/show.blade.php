@@ -72,7 +72,12 @@
                         </th>
                         <td>
                             @foreach($appointment->services as $id => $services)
-                                <span class="label label-info label-many">{{ htmlspecialchars($services->name) }}</span>
+                            <?php
+                                echo $services;
+
+                            ?>
+
+                                <span class="label label-info label-many">{{ $services->name }}</span>
                             @endforeach
                         </td>
                     </tr>
