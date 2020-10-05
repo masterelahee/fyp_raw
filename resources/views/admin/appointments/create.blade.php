@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<?php
-header("X-Content-Type-Options: nosniff")
-?>
+
 <div class="card">
     <div class="card-header">
         {{ trans('global.create') }} {{ trans('cruds.appointment.title_singular') }}
@@ -75,7 +73,7 @@ header("X-Content-Type-Options: nosniff")
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                <textarea id="comments" name="comments" class="form-control ">{{ old('comments', isset($appointment) ? $appointment->comments : '') }}</textarea>
+                <textarea id="comments" name="comments" class="form-control " readonly>{{ old('comments', isset($appointment) ? $appointment->comments : '') }}</textarea>
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
                         {{ $errors->first('comments') }}

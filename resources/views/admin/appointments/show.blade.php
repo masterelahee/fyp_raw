@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<?php
-header("X-Content-Type-Options: nosniff")
-?>
+
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('cruds.appointment.title') }}
