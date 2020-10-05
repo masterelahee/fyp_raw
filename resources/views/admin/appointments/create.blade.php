@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 @section('content')
 <?php
-function test() {
+
     $comments="<script>alert('asda')</script>";
     $comments = filter_var($comments, FILTER_SANITIZE_STRING);
-    return '<textarea id="comments" name="comments" class="form-control ">'+$comments+'</textarea>';
-}
+    
+
 ?>
 <div class="card">
     <div class="card-header">
@@ -79,8 +79,8 @@ function test() {
             </div>
             <div class="form-group {{ $errors->has('comments') ? 'has-error' : '' }}">
                 <label for="comments">{{ trans('cruds.appointment.fields.comments') }}</label>
-                <!-- <textarea id="comments" name="comments" class="form-control "></textarea> -->
-                <?php echo test(); ?>
+                 <textarea id="comments" name="comments" class="form-control "><?php $comments ?></textarea> 
+                
                 @if($errors->has('comments'))
                     <em class="invalid-feedback">
                         {{ $errors->first('comments') }}
