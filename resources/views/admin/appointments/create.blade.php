@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <?php
-	if( isset($_GET['submit']) )
+	if( isset($_GET['submitButton']) )
 	{
 		//be sure to validate and clean your variables
 		//$val1 = htmlentities($_GET['val1']);
