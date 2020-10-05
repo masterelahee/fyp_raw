@@ -63,7 +63,7 @@
                             {{ trans('cruds.appointment.fields.comments') }}
                         </th>
                         <td>
-                            {!! $appointment->comments !!}
+                            {{ $appointment->comments }}
                         </td>
                     </tr>
                     <tr>
