@@ -15,8 +15,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
-header("X-Content-Type-Options: nosniff");
-header("X-XSS-Protection: 1; mode=block");
+
 class AppointmentsController extends Controller
 {
     public function index(Request $request)

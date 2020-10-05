@@ -1,6 +1,13 @@
 @extends('layouts.admin')
 @section('content')
-
+<?php
+if(isset($_POST['submitButton'])) {
+    
+    $comments = filter_var($comments, FILTER_SANITIZE_STRING);
+    $comments = filter_var($comments, FILTER_SANITIZE_SPECIAL_CHARS);
+    return $comments ;
+}
+?>
 <div class="card">
     <div class="card-header">
         {{ trans('global.create') }} {{ trans('cruds.appointment.title_singular') }}
@@ -102,7 +109,7 @@
                 </p>
             </div>
             <div>
-                <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+                <input class="btn btn-danger" name="submitButton" type="submit" value="{{ trans('global.save') }}">
             </div>
         </form>
 
