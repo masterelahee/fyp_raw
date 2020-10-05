@@ -90,7 +90,7 @@
                     <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
                 <select name="services[]" id="services" class="form-control select2" multiple="multiple">
                     @foreach($services as $id => $services)
-                        <option value="{{ $id }}" {{ (in_array($id, old('services', [])) || isset($appointment) && $appointment->{{services->contains($id)) ? 'selected' : '' }}>{{ $services }}</option>
+                        <option value="{{ $id }}" {{ (in_array($id, old('services', [])) || isset($appointment) && $appointment->services->contains($id)) ? 'selected' : '' }}>{{ $services }}</option>
                     @endforeach
                 </select>
                 @if($errors->has('services'))
