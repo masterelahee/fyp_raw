@@ -94,7 +94,20 @@ class EmployeesController extends Controller
 
     public function store(StoreEmployeeRequest $request)
     {
-        $employee = Employee::create($request->all());
+
+        $employeenamefix="";
+
+        $empnamein=$request->all();
+        $empnamein['name']=$employeenamefix;
+        $employeenamefix=stripslashes($employeenamefix);
+        $employeenamefix=htmlspecialchars($employeenamefix);
+        $employeenamefix=strip_tags($employeenamefix);
+        $empnamein['name']=$employeenamefix;
+
+
+        $employee = Employee::create($empnamein);
+
+
         $employee->services()->sync($request->input('services', []));
 
         if ($request->input('photo', false)) {
