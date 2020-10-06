@@ -74,7 +74,7 @@ class ClientsController extends Controller
         $clientall=$request->all();
         $clientall['name']=$clientfixing;
         $clientall['phone']=$clientphonefix;
-        $clientphonefix=preg_replace("/[^0-9]/", "",$clientphonefix);
+        $clientphonefix=preg_replace('/\D/', '',$clientphonefix);
         $clientall['phone']=$clientphonefix;
         $clientfixing=stripslashes($clientfixing);
         $clientfixing=htmlspecialchars($clientfixing);
