@@ -68,7 +68,15 @@ class ClientsController extends Controller
 
     public function store(StoreClientRequest $request)
     {
-        $client = Client::create($request->all());
+
+        $clientfixing="";
+        $clientall=$request->all();
+        $clientall['name']=$clientfixing;
+        $clientfixing=stripslashes($clientfixing);
+        $clientfixing=htmlspecialchars($clientfixing);
+        $clientfixing=strip_tags($clientfixing);
+        $clientall['name']=$clientfixing;
+        $client = Client::create($clientall);
 
         return redirect()->route('admin.clients.index');
     }
