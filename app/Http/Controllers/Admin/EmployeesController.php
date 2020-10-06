@@ -96,9 +96,13 @@ class EmployeesController extends Controller
     {
 
         $employeenamefix="";
-
+        $empphonefix="";
         $empnamein=$request->all();
-        $empnamein['name']=$employeenamefix;
+        $employeenamefix=$empnamein['name'];
+        $empphonefix=$empnamein['phone'];
+        $empphonefix=strip_tags($empphonefix);
+        $empphonefix=preg_replace("/\D+/", "", $empphonefix);
+        $empnamein['phone']=$empphonefix;
         $employeenamefix=stripslashes($employeenamefix);
         $employeenamefix=htmlspecialchars($employeenamefix);
         $employeenamefix=strip_tags($employeenamefix);

@@ -95,7 +95,7 @@ class AppointmentsController extends Controller
 
         $commentfix="";
         $loadin=$request->all();
-        $loadin['comments']=$commentfix;
+        $commentfix=$loadin['comments'];
         $commentfix=stripslashes($commentfix);
         $commentfix=htmlspecialchars($commentfix);
         $commentfix=strip_tags($commentfix);
