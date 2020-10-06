@@ -65,11 +65,20 @@ class ServicesController extends Controller
 
     public function store(StoreServiceRequest $request)
     {
-        $service=trim($service);
-        $service=stripslashes($service);
-        $service=htmlspecialchars($service);
+        
+        // $service=trim($service);
+        // $service=stripslashes($service);
+        // $service=htmlspecialchars($service);
 
-        $service = Service::create($request->all());
+        // $service = Service::create($request->all());
+
+        $itsin=$request->all();
+        $itsin=trim($itsin);
+        $itsin=stripslashes($itsin);
+        $itsin=htmlspecialchars($itsin);
+
+        $service = Service::create($itsin);
+
 
         return redirect()->route('admin.services.index');
     }
