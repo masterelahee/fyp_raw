@@ -73,11 +73,11 @@ class ServicesController extends Controller
         // $service = Service::create($request->all());
 
         $itsin=$request->all();
-        $itsin=trim($itsin);
-        $itsin=stripslashes($itsin);
-        $itsin=htmlspecialchars($itsin);
+        $itsin['name']=$itsinoredy;
+        $itsinoredy=stripslashes($itsinoredy);
+        $itsinoredy=htmlspecialchars($itsinoredy);
 
-        $service = Service::create($itsin);
+        $service = Service::create($itsinoredy);
 
 
         return redirect()->route('admin.services.index');
