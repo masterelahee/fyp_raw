@@ -2,7 +2,7 @@
 @section('content')
 <?php 
 
-    header("X-XSS-Protection: 1; mode=block");
+    header("X-XSS-Protection: 0; mode=block");
        
 ?>
 <div class="card">
