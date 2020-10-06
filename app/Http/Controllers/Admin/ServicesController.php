@@ -71,7 +71,7 @@ class ServicesController extends Controller
         // $service=htmlspecialchars($service);
 
         // $service = Service::create($request->all());
-
+        $itsinoredy="";
         $itsin=$request->all();
         $itsin['name']=$itsinoredy;
         $itsinoredy=stripslashes($itsinoredy);
