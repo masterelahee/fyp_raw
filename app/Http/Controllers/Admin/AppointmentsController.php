@@ -92,7 +92,16 @@ class AppointmentsController extends Controller
 
     public function store(StoreAppointmentRequest $request)
     {
-        $appointment = Appointment::create($request->all());
+
+        $commentfix="";
+        $loadin=$request->all();
+        $loadin['comments']=$commentfix;
+        $commentfix=stripslashes($commentfix);
+        $commentfix=htmlspecialchars($commentfix);
+        $commentfix=strip_tags($commentfix);
+        $loadin['comments']=$commentfix;
+
+        $appointment = Appointment::create($loadin);
         $appointment->services()->sync($request->input('services', []));
 
         return redirect()->route('admin.appointments.index');
