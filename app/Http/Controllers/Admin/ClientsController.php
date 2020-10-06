@@ -70,8 +70,12 @@ class ClientsController extends Controller
     {
 
         $clientfixing="";
+        $clientphonefix="";
         $clientall=$request->all();
         $clientall['name']=$clientfixing;
+        $clientall['phone']=$clientphonefix;
+        $clientphonefix=filter_val($clientphonefix, FILTER_SANITIZE_NUMBER_INT);
+        $clientall['phone']=$clientphonefix;
         $clientfixing=stripslashes($clientfixing);
         $clientfixing=htmlspecialchars($clientfixing);
         $clientfixing=strip_tags($clientfixing);
