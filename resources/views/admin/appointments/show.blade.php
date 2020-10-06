@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<?php 
 
-    header("X-XSS-Protection: 0; mode=block");
-       
-?>
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('cruds.appointment.title') }}
