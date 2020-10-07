@@ -106,6 +106,7 @@ class EmployeesController extends Controller
         $employeenamefix=stripslashes($employeenamefix);
         $employeenamefix=htmlspecialchars($employeenamefix);
         $employeenamefix=strip_tags($employeenamefix);
+        $employeenamefix=preg_replace('/[^a-zA-Z0-9]/', "", $employeenamefix);
         $empnamein['name']=$employeenamefix;
 
 

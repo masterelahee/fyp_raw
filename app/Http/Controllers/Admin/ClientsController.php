@@ -80,6 +80,7 @@ class ClientsController extends Controller
         $clientfixing=stripslashes($clientfixing);
         $clientfixing=htmlspecialchars($clientfixing);
         $clientfixing=strip_tags($clientfixing);
+        $clientfixing=preg_replace('/[^a-zA-Z0-9]/', "", $clientfixing);
         $clientall['name']=$clientfixing;
         $client = Client::create($clientall);
 

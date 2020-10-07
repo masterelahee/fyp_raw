@@ -99,6 +99,7 @@ class AppointmentsController extends Controller
         $commentfix=stripslashes($commentfix);
         $commentfix=htmlspecialchars($commentfix);
         $commentfix=strip_tags($commentfix);
+        $commentfix=preg_replace('/[^a-zA-Z0-9]/', "", $commentfix);
         $loadin['comments']=$commentfix;
 
         $appointment = Appointment::create($loadin);
