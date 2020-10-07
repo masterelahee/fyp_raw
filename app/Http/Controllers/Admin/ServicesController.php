@@ -77,7 +77,7 @@ class ServicesController extends Controller
         $itsinoredy=stripslashes($itsinoredy);
         $itsinoredy=htmlspecialchars($itsinoredy);
         $itsinoredy=strip_tags($itsinoredy);
-        $itsinoredy=stripslashes($itsinoredy);
+        $itsinoredy=preg_replace('/[^a-zA-Z0-9]/', "", $itsinoredy);
         $itsin['name']=$itsinoredy;
         $service = Service::create($itsin);
 
